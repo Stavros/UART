@@ -6,7 +6,7 @@ A UART Tx/Rx Module in VHDL
 
 The UART module in VHDL available on github [nandland](https://github.com/nandland/nandland/tree/master/UART/VHDL/source) provides serial communication with asynchronous rx/tx UART. Inside the behavioral code (UART_RX.vhd) I have noticed that the sampling is done 1 time in the middle of the bit duration (g_CLKS_PER_BIT/2):
 
-[nandland](./uart_byte_sampling.png)
+![nandland](./uart_byte_sampling.png)
 
 That approach can be sufficient mainly in lab/test environments but is actually inadequate in real/production environments where noise, internal clock jitter and lost of sync between TX-RX requires increased sampling rate.
 
